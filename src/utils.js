@@ -1,7 +1,7 @@
-var proto = require('dash-protocol')
+var proto = require('gobyte-protocol')
 var struct = proto.struct
 var defaultNetMessages = proto.messages.defaultMessages
-var DefaultBlock = require('bitcore-lib-dash').BlockHeader
+var DefaultBlock = require('bitcore-lib-gobyte').BlockHeader
 var inherits = require('inherits')
 var assign = require('object-assign')
 
@@ -30,7 +30,7 @@ function createParams (params, assert) {
 
   if (!params.Block) {
 
-    // configure bitcore-lib-dash BlockHeader as default block
+    // configure bitcore-lib-gobyte BlockHeader as default block
     var Block = DefaultBlock
     params.Block = Block
 
